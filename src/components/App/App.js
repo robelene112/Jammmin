@@ -10,16 +10,16 @@ export class App extends React.Component {
     this.state = {
       searchResults: [
         {
-          name: "Love Sosa",
-          artist: "Chief Keef",
-          album: "Finally Rich",
+          name: "name1",
+          artist: "artist1",
+          album: "album1",
           id: 1,
         },
-        { name: "Poker Face", artist: "Lady Gaga", album: "troelalala", id: 2 },
+        { name: "name2", artist: "artist2", album: "album2", id: 2 },
         {
-          name: "Applause",
-          artist: "Lady Gaga",
-          album: "Finally bitch",
+          name: "name3",
+          artist: "artist3",
+          album: "album3",
           id: 3,
         },
       ],
