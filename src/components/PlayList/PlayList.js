@@ -15,15 +15,16 @@ export class PlayList extends React.Component {
   render() {
     return (
       <div className="Playlist">
-        <input defaultValue={"New Playlist"} onChange={this.handleNameChange} />
+        <input defaultValue={"New playlist"} onChange={this.handleNameChange} />
         {/* <!-- Add a TrackList component --> */}
         <TrackList
-          tracks={this.props.searchResults}
-          playlistTracks={this.props.playlistTracks}
+          tracks={this.props.playlistTracks}
           onRemove={this.props.onRemove}
-          isRemoval={this.props.isRemoval}
+          isRemoval={true}
         />
-        <button className="Playlist-save">SAVE TO SPOTIFY</button>
+        <button className="Playlist-save" onClick={this.props.onSave}>
+          SAVE TO SPOTIFY
+        </button>
       </div>
     );
   }
