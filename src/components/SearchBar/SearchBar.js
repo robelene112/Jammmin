@@ -9,8 +9,21 @@ export class SearchBar extends React.Component {
     this.handleTermChange = this.handleTermChange.bind(this);
   }
 
+  storeSession() {
+    window.sessionStorage.setItem("term", this.state.term);
+  }
+
   search() {
+    if (!window.sessionStorage.getItem("term")) {
+      this.storeSession();
+    }
     this.props.onSearch(this.state.term);
+  }
+
+  componentDidMount() {
+    if (window.sessionStorage.getItem("term")) {
+      this.props.onSearch(window.sessionStorage.getItem("term"));
+    }
   }
 
   handleTermChange(e) {
